@@ -15,9 +15,12 @@
 ## Aktuelle Vorschläge
 
 > **Vorlage (bitte diese Zeile kopieren)**
+>
 > | Thema | Kurzbeschreibung | Format | Vorgeschlagen von | Präsentiert von | Dauer | Status | Votes |
 > |---|---|---|---|---|---|---|---|
 > | _Titel_ | _1–2 Sätze_ | _⚡️/🎤/🧪/…_ | _Name_ | _Name/gesucht_ | _z. B. 15′_ | `neu` | 👍 x0 |
+> |---|---|---|---|---|---|---|---|
+> | Mein neues Tooling – dazwischen spielen wir Golf | Erfahrungsbericht: Umstieg auf neues Dev-Tooling (Bastard**Keyboard**, **Nix**Os, Lazy**Vim**) | ⚡️ 🧪 🛠 | Marco | Marco | - | `neu` | 👍 x0 |
 
 <!-- Beispiele -->
 
