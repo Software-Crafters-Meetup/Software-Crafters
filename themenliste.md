@@ -20,12 +20,7 @@
 > |---|---|---|---|---|---|---|---|
 > | _Titel_ | _1–2 Sätze_ | _⚡️/🎤/🧪/…_ | _Name_ | _Name/gesucht_ | _z. B. 15′_ | `neu` | 👍 x0 |
 > |---|---|---|---|---|---|---|---|
-> | Mein neues Tooling – dazwischen spielen wir Golf | Erfahrungsbericht: Umstieg auf neues Dev-Tooling (Bastard**Keyboard**, **Nix**Os, Lazy**Vim**) | ⚡️ 🧪 🛠 | Marco | Marco | - | `neu` | 👍 x1 |
-> | auch Tooling, aber auf Windows | 💻 Präsentation | Windows PowerToys, WSL mit Nix develop (einfacher) | Jasmin | Jasmin | 10 Min | `noch nicht geplant` | 👍 x0 |
-> | Plant UML Einführung | 💻 Demo | Eigener Server statt online (schneller) + Syntax für Domain Models. | Jasmin | Jasmin | 10 Min | `noch nicht geplant` | 👍 x0 |
-> | Anki Karteikarten Programm | 💻 Demo | Je nach Wunsch ausführlicher oder wenig ausführlich. Besonders für Studenten praktisch. | Jasmin | Jasmin | 10-? Min | `noch nicht geplant` | 👍 x0 |
-> | Teamkommunikation in schnell | 🎤Präsentation + Fragebogen | Wichtigste Erkenntnisse aus dem Modul Teamkommunikation. | Jasmin | Jasmin | ? | `noch nicht geplant` | 👍 x0 |
-> | Neues in HTML + CSS (JS?) | ⚡️🎤 | | Jasmin | | | `idee` | 👍 x0 |
+> | Mein neues Tooling – dazwischen spielen wir Golf | Erfahrungsbericht: Umstieg auf neues Dev-Tooling (Bastard**Keyboard**, **Nix**Os, Lazy**Vim**) | ⚡️ 🧪 🛠 | Marco | Marco | - | `neu` | 👍 x0 |
 
 <!-- Beispiele -->
 
