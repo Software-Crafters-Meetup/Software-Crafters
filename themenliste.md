@@ -33,12 +33,6 @@
 Bitte hier euer Vorwissen vermerken:
 Monads schon gehört und angewendet (auch wenn länger her): **Ja 1x, Nein 0x**
 
-<!-- Beispiele -->
-
-| Rust für Einsteiger | Ownership, Borrowing, warum das sicher ist | 🎤 | Marco | Sarah | 25′ | `neu` | 👍 x3 (+1 M, +1 T, +1 L) |
-| WASM Live-Demo | Rust→WASM, mini App im Browser | 🧪 | Tim | Tim | 15′ | `neu` | 👍 x2 |
-| Monitoring Basics | Prometheus + Grafana Quickstart | ⚡️ | Lea | gesucht | 10′ | `neu` | 👍 x1 |
-
 ---
 
 ## Geplant (nächste(n) Termin(e))
