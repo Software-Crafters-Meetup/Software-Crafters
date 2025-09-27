@@ -25,7 +25,13 @@
 > | Plant UML Einführung                             | Eigener Server statt online (schneller) + Syntax für Domain Models.                            | 💻 Demo                     | Jasmin            | Jasmin          | 10 Min      | `noch nicht geplant` | 👍 x0 |
 > | Anki Karteikarten Programm                       | Je nach Wunsch ausführlicher oder wenig ausführlich. Besonders für Studenten praktisch.        | 💻 Demo                     | Jasmin            | Jasmin          | 10-? Min    | `noch nicht geplant` | 👍 x0 |
 > | Teamkommunikation in schnell                     | Wichtigste Erkenntnisse aus dem Modul Teamkommunikation.                                       | 🎤Präsentation + Fragebogen | Jasmin            | Jasmin          | ?           | `noch nicht geplant` | 👍 x0 |
-> | Neues in HTML + CSS (JS?)                        |                                                                                                | ⚡️🎤                       | Jasmin            |                 |             | `idee`               | 👍 x0 |
+> | Neues in HTML + CSS (JS?)                        |                                                                                                | ⚡️🎤                       | Jasmin            |                 |             | `idee`               | 👍 x1 |
+> | \*Serie in Functional Programming in Javascript  |                                                                                                | ⚡️🛠                       | Marco             | Marco           | ?           | Idee                 | Votes |
+
+\* Mehrere Sessions geplant – inspiriert vom [Buch](https://amzn.eu/d/gE9sjTR). FP-Theorie (vor allem in Haskell) wird praxisnah in JavaScript (eventuell sogar TypeScript) überführt, bei Bedarf mit etwas Mathematik. Start bei Basics oder direkt Themen wie Functors, Monads, Transducers, Lazy Evaluation. Ausführlichkeit nach Interesse. Gebt dem Thema Votes wenn ich damit starten soll.
+
+Bitte hier euer Vorwissen vermerken:
+Monads schon gehört und angewendet (auch wenn länger her): **Ja 1x, Nein 0x**
 
 <!-- Beispiele -->
 
