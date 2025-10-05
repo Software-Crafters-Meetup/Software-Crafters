@@ -4,20 +4,22 @@ Willkommen bei der Community of Practice «Software Crafters». Hier sammeln wir
 
 ## Schnellstart
 
-- 👉 **Themen vorschlagen oder voten:** siehe **[themenliste.md](./themenliste.md)**
-- Format-Ideen: ⚡️ Lightning · 🎤 Talk · 🧪 Demo · 🛠 Workshop · 💬 Discussion
+- 👉 **Themen vorschlagen oder abstimmen:** siehe **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/themenvorschl%C3%A4ge)**
+- Formate: ⚡️ Lightning · 🎤 Talk · 🧪 Demo · 🛠 Workshop · 💬 Discussion
+- **Eingeplante Themen & Historie:** **[themenliste.md](./themenliste.md)**
 
 ## Wie du mitmachst
 
-1. Neues Thema in **themenliste.md** gemäss Vorlage eintragen.
-2. Mit 👍 oder «+1» in der Spalte **Votes** priorisieren.
-3. Falls du ein Thema praesentieren willst, trage dich bei **Praesentiert von** ein.
+1. Schlage ein neues Thema in **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/themenvorschl%C3%A4ge)** vor.
+2. Stimme mit der Vote-Funktion für Themen ab.
+3. Wenn du ein Thema präsentieren oder sonst beitragen möchtest, schreibe in die Diskussion.
 
 ## Treffen
 
 - Nächstes Datum: 21.10.2025
-- Ort: Fachhochschule OST in Rapperswil [Zimmer 1.262](https://geometalab.gitlab.io/campus-maps-with-openstreetmap/ifs-campus-map/?search=way/902580361)
-- Öffentlich ohne Anmeldung
+- Ort: Fachhochschule OST in Rapperswil – [Zimmer 1.262](https://geometalab.gitlab.io/campus-maps-with-openstreetmap/ifs-campus-map/?search=way/902580361)
+- Öffentlich, keine Anmeldung nötig - [Meetup.com](https://www.meetup.com/mitsprache-in-der-digitalen-welt-glarus/events/311189900)
+- Zeit: 19.00 Uhr
 
 ## Regeln kurz
 
