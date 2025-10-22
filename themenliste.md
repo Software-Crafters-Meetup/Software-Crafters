@@ -33,6 +33,7 @@ Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, da
 
 ## Historie (fertig)
 
-| Thema   | Präsentiert von | Dauer | Datum      | Material                                                                       |
-| ------- | --------------- | ----- | ---------- | ------------------------------------------------------------------------------ |
-| Kickoff | Marco           | 120′  | 23.09.2025 | [Slides](https://github.com/Software-Crafters-Meetup/Kickoff/tree/main/slides) |
+| Thema                    | Präsentiert von | Dauer | Datum      | Material                                                                       |
+| ------------------------ | --------------- | ----- | ---------- | ------------------------------------------------------------------------------ |
+| Nix als Entwicklungstool | Georgiy         | 240'  | 21.10.2025 | [Slides](), [Demo]()                                                           |
+| Kickoff                  | Marco           | 120′  | 23.09.2025 | [Slides](https://github.com/Software-Crafters-Meetup/Kickoff/tree/main/slides) |

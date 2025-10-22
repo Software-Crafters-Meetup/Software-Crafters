@@ -1,0 +1,49 @@
+name: "💡 Themenvorschlag"
+description: "Neues Thema zur Präsentation oder Diskussion vorschlagen."
+title: "[Thema]: "
+labels: ["themenvorschlag"]
+body:
+  - type: textarea
+    id: beschreibung
+    attributes:
+      label: "📝 Beschreibung"
+      description: ""
+      placeholder: "Beschreibe kurz das Thema, Ziel oder den Nutzen…"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: "🎬 Format"
+      description: "Wähle genau ein Format."
+      options:
+        - "⚡️ Lightning"
+        - "🎤 Talk"
+        - "🧪 Demo"
+        - "🛠 Workshop"
+        - "💬 Discussion"
+      default: 3
+
+  - type: input
+    id: praesentiert_von
+    attributes:
+      label: "🎤 Präsentiert von"
+      placeholder: "@username / oder zu bestimmen"
+
+  - type: input
+    id: dauer
+    attributes:
+      label: "⏱️ Dauer"
+      placeholder: "<10 Minuten"
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: "📌 Status"
+      options:
+        - "Vorschlag"
+        - "In Planung"
+        - "Nächstes Meetup"
+        - "Behandelt"
+      default: 0
