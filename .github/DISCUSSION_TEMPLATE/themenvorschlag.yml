@@ -2,10 +2,9 @@ title: "[Thema]: "
 labels: ["themenvorschlag"]
 body:
   - type: markdown
-    id: beschreibung
     attributes:
-      value: "Beschreibe kurz das Thema, Ziel oder den Nutzen…"
-
+      value: |
+        Beschreibe kurz das Thema, Ziel oder den Nutzen…
   - type: dropdown
     id: format
     attributes:
@@ -19,19 +18,16 @@ body:
         - "🛠 Workshop"
         - "💬 Discussion"
       default: 3
-
   - type: input
     id: praesentiert_von
     attributes:
       label: "🎤 Präsentiert von"
       placeholder: "@username / oder zu bestimmen"
-
   - type: input
     id: dauer
     attributes:
       label: "⏱️ Dauer"
       placeholder: "<10 Minuten"
-
   - type: dropdown
     id: status
     attributes:
