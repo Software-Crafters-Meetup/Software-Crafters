@@ -11,8 +11,8 @@ body:
   - type: dropdown
     id: format
     attributes:
-      label: "🎬 Format"
-      description: "Wähle genau ein Format."
+      label: "🎬 Formate"
+      description: "Wähle die Formate"
       multiple: true
       options:
         - "⚡️ Lightning"

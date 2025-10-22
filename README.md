@@ -4,7 +4,7 @@ Willkommen bei der Community of Practice «Software Crafters». Hier sammeln wir
 
 ## Schnellstart
 
-- 👉 **Themen vorschlagen oder abstimmen:** siehe **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/themenvorschl%C3%A4ge)**
+- 👉 **Themen vorschlagen oder abstimmen:** siehe **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/themenvorschlag)**
 - Formate: ⚡️ Lightning · 🎤 Talk · 🧪 Demo · 🛠 Workshop · 💬 Discussion
 - **Eingeplante Themen & Historie:** **[themenliste.md](./themenliste.md)**
 
