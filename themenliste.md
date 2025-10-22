@@ -2,7 +2,7 @@
 
 **So geht’s**
 
-1. Schlage ein neues Thema in **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/themenvorschl%C3%A4ge)** vor.
+1. Schlage ein neues Thema in **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/1_themenvorschlag)** vor.
 2. Stimme mit der Vote-Funktion für Themen ab.
 3. Wenn du ein Thema präsentieren oder sonst beitragen möchtest, schreibe in die Diskussion.
 
