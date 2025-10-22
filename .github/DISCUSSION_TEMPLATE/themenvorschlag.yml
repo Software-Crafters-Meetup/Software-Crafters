@@ -1,10 +1,13 @@
 title: "[Thema]: "
 labels: ["themenvorschlag"]
 body:
-  - type: markdown
+  - type: textarea
+    id: beschreibung
     attributes:
-      value: |
-        Beschreibe kurz das Thema, Ziel oder den Nutzen…
+      label: "📝 Beschreibung"
+      description: "Beschreibe kurz das Thema, Ziel oder den Nutzen..."
+    validations:
+      required: true
   - type: dropdown
     id: format
     attributes:
