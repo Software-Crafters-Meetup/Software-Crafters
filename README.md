@@ -4,13 +4,13 @@ Willkommen bei der Community of Practice «Software Crafters». Hier sammeln wir
 
 ## Schnellstart
 
-- 👉 **Themen vorschlagen oder abstimmen:** siehe **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/themenvorschlag)**
+- 👉 **Themen vorschlagen oder abstimmen:** siehe **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/1_themenvorschlag)**
 - Formate: ⚡️ Lightning · 🎤 Talk · 🧪 Demo · 🛠 Workshop · 💬 Discussion
 - **Eingeplante Themen & Historie:** **[themenliste.md](./themenliste.md)**
 
 ## Wie du mitmachst
 
-1. Schlage ein neues Thema in **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/themenvorschl%C3%A4ge)** vor.
+1. Schlage ein neues Thema in **[Themenvorschläge](https://github.com/orgs/Software-Crafters-Meetup/discussions/categories/1_themenvorschlag)** vor.
 2. Stimme mit der Vote-Funktion für Themen ab.
 3. Wenn du ein Thema präsentieren oder sonst beitragen möchtest, schreibe in die Diskussion.
 
