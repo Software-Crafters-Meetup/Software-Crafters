@@ -1,22 +1,17 @@
-name: "💡 Themenvorschlag"
-description: "Neues Thema zur Präsentation oder Diskussion vorschlagen."
 title: "[Thema]: "
 labels: ["themenvorschlag"]
 body:
-  - type: textarea
+  - type: markdown
     id: beschreibung
     attributes:
-      label: "📝 Beschreibung"
-      description: ""
-      placeholder: "Beschreibe kurz das Thema, Ziel oder den Nutzen…"
-    validations:
-      required: true
+      value: "Beschreibe kurz das Thema, Ziel oder den Nutzen…"
 
   - type: dropdown
     id: format
     attributes:
       label: "🎬 Format"
       description: "Wähle genau ein Format."
+      multiple: true
       options:
         - "⚡️ Lightning"
         - "🎤 Talk"
