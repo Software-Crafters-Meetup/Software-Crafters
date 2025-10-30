@@ -16,10 +16,10 @@ Willkommen bei der Community of Practice «Software Crafters». Hier sammeln wir
 
 ## Treffen
 
-- Nächstes Datum: 21.10.2025
+- Nächstes Datum: 21.11.2025
 - Ort: Fachhochschule OST in Rapperswil – [Zimmer 1.262](https://geometalab.gitlab.io/campus-maps-with-openstreetmap/ifs-campus-map/?search=way/902580361)
 - Öffentlich, keine Anmeldung nötig - [Meetup.com](https://www.meetup.com/mitsprache-in-der-digitalen-welt-glarus/events/311189900)
-- Zeit: 19.00 Uhr
+- Zeit: 17.15 Uhr
 
 ## Regeln kurz
 
