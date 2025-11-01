@@ -25,10 +25,10 @@ Dies beinhaltet:
 
 Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, das ihr in letzter Zeit aufgefallen ist, und es kurz vorstellt. Das System über GitHub wurde danach erstellt und wird fürs übernächste Treffen verwendet.
 
-| Thema                                                                                                              | Präsentiert von         | Dauer      | Termin     |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------- | ---------- | ---------- |
-| [Mein neues Tooling – dazwischen spielen wir Golf](https://github.com/orgs/Software-Crafters-Meetup/discussions/4) | Marco (@marcokuoni)     | 90 Minuten | 21.11.2025 |
-| [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14)           | Lukas (@lukas-messmer ) | -          | -          |
+| Thema                                                                                                              | Präsentiert von        | Dauer      | Termin     |
+| ------------------------------------------------------------------------------------------------------------------ | ---------------------- | ---------- | ---------- |
+| [Mein neues Tooling – dazwischen spielen wir Golf](https://github.com/orgs/Software-Crafters-Meetup/discussions/4) | Marco (@marcokuoni)    | 90 Minuten | 21.11.2025 |
+| [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14)           | Lukas (@lukas-messmer) | -          | -          |
 
 ---
 
