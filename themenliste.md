@@ -38,3 +38,7 @@ Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, da
 | [Mein neues Tooling – dazwischen spielen wir Golf](https://github.com/orgs/Software-Crafters-Meetup/discussions/4) | Marco (@marcokuoni)    | 90' | 21.11.2025 |              |
 | Nix als Entwicklungstool | Georgiy         | 240'  | 21.10.2025 | [Slides](https://github.com/omega-800/nix-as-a-devtool), [Demo](https://github.com/omega-800/nix-c-example) |
 | Kickoff                  | Marco           | 120′  | 23.09.2025 | [Slides](https://github.com/Software-Crafters-Meetup/Kickoff/tree/main/slides)                              |
+| Esperanto-Schnupperkurs¹ | Raphael | 240' | 15.12.2025 | [Slides](https://ses-ch.github.io/Schnupperkurs/) |
+
+___
+¹Spontan abgehalten, da der Vortragende des für dieses Datum geplanten Talks kurzfristig ausfiel.
