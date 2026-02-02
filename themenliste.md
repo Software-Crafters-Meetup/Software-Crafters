@@ -27,7 +27,7 @@ Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, da
 
 | Thema                                                                                                              | Präsentiert von        | Dauer      | Termin     |
 | ------------------------------------------------------------------------------------------------------------------ | ---------------------- | ---------- | ---------- |
-| [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14)           | Lukas (@lukas-messmer) | -          | -          |
+
 
 ---
 
@@ -39,6 +39,7 @@ Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, da
 | Nix als Entwicklungstool | Georgiy         | 240'  | 21.10.2025 | [Slides](https://github.com/omega-800/nix-as-a-devtool), [Demo](https://github.com/omega-800/nix-c-example) |
 | Kickoff                  | Marco           | 120′  | 23.09.2025 | [Slides](https://github.com/Software-Crafters-Meetup/Kickoff/tree/main/slides)                              |
 | Esperanto-Schnupperkurs¹ | Raphael | 240' | 15.12.2025 | [Slides](https://ses-ch.github.io/Schnupperkurs/) |
+| [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14)           | Lukas (@lukas-messmer) | -          | 29.01.2026 |
 
 ___
 ¹Spontan abgehalten, da der Vortragende des für dieses Datum geplanten Talks kurzfristig ausfiel.
