@@ -27,7 +27,7 @@ Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, da
 
 | Thema                                                                                                              | Präsentiert von        | Dauer      | Termin     |
 | ------------------------------------------------------------------------------------------------------------------ | ---------------------- | ---------- | ---------- |
-
+| [Functional Programming in Javascript mit Theorie](https://github.com/orgs/Software-Crafters-Meetup/discussions/10), Session 1 | Marco | t.b.d. | 24.02.2026 |
 
 ---
 
