@@ -25,21 +25,28 @@ Dies beinhaltet:
 
 Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, das ihr in letzter Zeit aufgefallen ist, und es kurz vorstellt. Das System über GitHub wurde danach erstellt und wird fürs übernächste Treffen verwendet.
 
-| Thema                                                                                                              | Präsentiert von        | Dauer      | Termin     |
-| ------------------------------------------------------------------------------------------------------------------ | ---------------------- | ---------- | ---------- |
-| [Functional Programming in Javascript mit Theorie](https://github.com/orgs/Software-Crafters-Meetup/discussions/10), Session 1 | Marco | t.b.d. | 24.02.2026 |
+| Thema                                                                                                                          | Präsentiert von        | Dauer  | Termin     |
+| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ------ | ---------- |
+| Software Engineering With AI – Without Losing Control                                                                          | Clemens Meier          | t.b.d. | 24.03.2026 |
+| [Type Systems](https://github.com/orgs/Software-Crafters-Meetup/discussions/15)                                                | Lukas (@lbuchli)       | t.b.d. | t.b.d.     |
+| [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14), Session 2            | Lukas (@lukas-messmer) | t.b.d. | t.b.d.     |
+| [Schauen wir uns Jujutsu an](https://github.com/orgs/Software-Crafters-Meetup/discussions/19)                                  | Raphael (@das-g)       | t.b.d. | t.b.d.     |
+| [Functional Programming in Javascript mit Theorie](https://github.com/orgs/Software-Crafters-Meetup/discussions/10), Session 2 | Marco (@marcokuoni)    | t.b.d. | t.b.d.     |
 
 ---
 
 ## Historie (fertig)
 
-| Thema                    | Präsentiert von | Dauer | Datum      | Material                                                                                                    |
-| ------------------------ | --------------- | ----- | ---------- | ----------------------------------------------------------------------------------------------------------- |
-| [Mein neues Tooling – dazwischen spielen wir Golf](https://github.com/orgs/Software-Crafters-Meetup/discussions/4) | Marco (@marcokuoni)    | 90' | 21.11.2025 |              |
-| Nix als Entwicklungstool | Georgiy         | 240'  | 21.10.2025 | [Slides](https://github.com/omega-800/nix-as-a-devtool), [Demo](https://github.com/omega-800/nix-c-example) |
-| Kickoff                  | Marco           | 120′  | 23.09.2025 | [Slides](https://github.com/Software-Crafters-Meetup/Kickoff/tree/main/slides)                              |
-| Esperanto-Schnupperkurs¹ | Raphael | 240' | 15.12.2025 | [Slides](https://ses-ch.github.io/Schnupperkurs/) |
-| [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14)           | Lukas (@lukas-messmer) | -          | 29.01.2026 |
+| Thema                                                                                                               | Präsentiert von        | Dauer | Datum      | Material                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------- | ---------------------- | ----- | ---------- | ----------------------------------------------------------------------------------------------------------- |
+| [Mein neues Tooling – dazwischen spielen wir Golf](https://github.com/orgs/Software-Crafters-Meetup/discussions/4)  | Marco (@marcokuoni)    | 90'   | 21.11.2025 |                                                                                                             |
+| Nix als Entwicklungstool                                                                                            | Georgiy (@omega-800)   | 120'  | 21.10.2025 | [Slides](https://github.com/omega-800/nix-as-a-devtool), [Demo](https://github.com/omega-800/nix-c-example) |
+| Kickoff                                                                                                             | Marco (@marcokuoni)    | 120′  | 23.09.2025 | [Slides](https://github.com/Software-Crafters-Meetup/Kickoff/tree/main/slides)                              |
+| Esperanto-Schnupperkurs¹                                                                                            | Raphael (@das-g)       | 120'  | 15.12.2025 | [Slides](https://ses-ch.github.io/Schnupperkurs/)                                                           |
+| [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14)            | Lukas (@lukas-messmer) | 120'  | 29.01.2026 | [Sides](slides/Praesi_Software_Dokumentation.pdf)                                                           |
+| [Functional Programming in Javascript mit Theorie](https://github.com/orgs/Software-Crafters-Meetup/discussions/10) | Marco (@marcokuoni)    | 120'  | 24.02.2026 | [Slides](https://github.com/marcokuoni/fp_typescript)                                                       |
 
-___
+---
+
 ¹Spontan abgehalten, da der Vortragende des für dieses Datum geplanten Talks kurzfristig ausfiel.
+
