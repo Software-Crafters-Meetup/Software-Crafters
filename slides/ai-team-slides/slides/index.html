@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>OST Reveal Template – Simplified HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Reveal.js core styles from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/white.css" id="theme" />
+  <!-- Syntax highlighting theme -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css" />
+  <!-- OST custom theme -->
+  <link rel="stylesheet" href="assets/ost-reveal.css" />
+
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal" data-organization="Departement I / Institut f&#252;r Software (IFS)" data-speaker="Clemens Meier"
+    data-email="clemens.meier@ost.ch" data-date="24. März 2026" data-module="Software Crafters">
+    <div class="slides">
+
+      <!-- =============================================
+           TITLE SLIDE
+           ============================================= -->
+      <section data-slide-type="title" data-background-image="images/saentis.jpg" data-background-size="cover">
+        <h1>AI-TEAM</h1>
+        <h2>Using Coding Agents - Without Losing Control</h2>
+        <h3>Conway's Law Applied to Agentic Software Engineering</h3>
+      </section>
+
+      <!-- =============================================
+           CHAPTER 1: Agentic Workflows
+           ============================================= -->
+      <section data-slide-type="chapter" data-background-image="images/rappi2.jpeg" data-background-size="cover">
+        <h1>Agentic Workflows</h1>
+        <h2>Wie Coding Agents arbeiten</h2>
+      </section>
+
+      <section>
+        <h1>LLMs vs Agents</h1>
+        <div class="content">
+          <img src="images/agents.webp" alt="LLMs vs Agents" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>Beispiele heutiger Coding Agents</h1>
+        <div class="content r-stretch">
+          <div class="logo-grid">
+            <a class="logo-item" href="https://github.com/features/copilot" target="_blank"><img
+                src="images/logo-copilot.png" alt="Copilot">
+              <p>GitHub Copilot</p>
+            </a>
+            <a class="logo-item" href="https://www.anthropic.com/claude-code" target="_blank"><img
+                src="images/logo-claude-code.png" alt="Claude Code">
+              <p>Claude Code</p>
+            </a>
+            <a class="logo-item" href="https://cline.bot" target="_blank"><img src="images/logo-cline.png" alt="Cline">
+              <p>Cline (Open Source)</p>
+            </a>
+            <a class="logo-item" href="https://opencode.ai" target="_blank"><img src="images/logo-opencode.png"
+                alt="OpenCode">
+              <p>OpenCode (Open Source)</p>
+            </a>
+            <a class="logo-item" href="https://openai.com/codex" target="_blank"><img src="images/logo-codex.png"
+                alt="Codex">
+              <p>Codex</p>
+            </a>
+            <a class="logo-item" href="https://www.cursor.com" target="_blank"><img src="images/logo-cursor.png"
+                alt="Cursor">
+              <p>Cursor</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Tool Use Pattern</h1>
+        <div class="content">
+          <img src="images/tool-use.png" alt="Tool Use Pattern" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>Reason and Act (ReAct)</h1>
+        <div class="content">
+          <img src="images/react.webp" alt="Reason and Act Pattern" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>Planning Pattern</h1>
+        <div class="content">
+          <img src="images/plan.webp" alt="Planning Pattern" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>Agent in Action</h1>
+        <div class="content">
+          <img src="images/copilot-tools.png" alt="How It Works" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>Skills</h1>
+        <div class="content">
+          <img src="images/typical-agent-loop.png" alt="Agent Loop" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>Context Window</h1>
+        <div class="content">
+          <img src="images/context-window.svg" alt="Context Window" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>Gr&#246;sseres Context Window = besser?</h1>
+        <div class="content r-stretch" style="display: flex; gap: 1.2em; align-items: stretch; font-size: 1.2em;">
+          <div class="fragment"
+            style="flex: 1; border: 3px solid #db4437; border-radius: 12px; padding: 0.8em; display: flex; flex-direction: column;">
+            <h3 style="color: #db4437; margin: 0 0 0.3em; font-size: 1em;">Überforderung</h3>
+            <p style="font-size: 0.65em; margin: 0;">Zu viel Kontext &#252;berfordert das Modell &ndash; der Fokus geht
+              verloren, die Antwortzeit steigt.</p>
+          </div>
+          <div class="fragment"
+            style="flex: 1; border: 3px solid #f4b400; border-radius: 12px; padding: 0.8em; display: flex; flex-direction: column;">
+            <h3 style="color: #f4b400; margin: 0 0 0.3em; font-size: 1em;">Lost in the Middle</h3>
+            <p style="font-size: 0.65em; margin: 0;">Das Modell gewichtet Anfang und Ende st&#228;rker &ndash; relevante
+              Inhalte in der Mitte werden &#252;bersehen.</p>
+          </div>
+          <div class="fragment"
+            style="flex: 1; border: 3px solid #0f9d58; border-radius: 12px; padding: 0.8em; display: flex; flex-direction: column;">
+            <h3 style="color: #0f9d58; margin: 0 0 0.3em; font-size: 1em;">Rauschen</h3>
+            <p style="font-size: 0.65em; margin: 0;">Mehr Kontext f&#252;hrt zu Redundanz, Widerspr&#252;chen und
+              verzerrten Schlussfolgerungen.</p>
+          </div>
+          <div class="fragment"
+            style="flex: 1; border: 3px solid #4285f4; border-radius: 12px; padding: 0.8em; display: flex; flex-direction: column;">
+            <h3 style="color: #4285f4; margin: 0 0 0.3em; font-size: 1em;">Weite Distanzen</h3>
+            <p style="font-size: 0.65em; margin: 0;">Mit wachsendem Kontext f&#228;llt es dem Modell schwerer, weit
+              auseinanderliegende Informationen zu verkn&#252;pfen.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>Context Window</h1>
+        <div class="content">
+          <img src="images/context-window.webp" alt="Context Window" style="max-height: 640px;">
+        </div>
+      </section>
+      <section>
+        <h1>Das Problem</h1>
+        <div class="content">
+          <ul>
+            <li>Ein Agent &#8594; ein Context Window</li>
+            <li>Ganzes Projekt in ein Context Window? Opus kann alles! ;)</li>
+            <li class="fragment">Subagents?</li>
+            <li class="fragment">Lazy RAG?</li>
+            <li class="fragment">Context Compression?</li>
+          </ul>
+          <div class="r-vstack fragment">
+            <p>&nbsp;</p>
+            <div class="r-hstack">
+              <h1>&#129300;</h1>
+            </div>
+            <div class="r-hstack">
+              <p>Wie schaffen wir fokussierte Agents?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>Multi-Agent Pattern?</h1>
+        <div class="content">
+          <img src="images/multi-agent.png" alt="Multi-Agent Pattern" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <!-- =============================================
+           CHAPTER 3: Conway's Law
+           ============================================= -->
+      <section data-slide-type="chapter" data-background-image="images/organization.webp" data-background-size="cover">
+        <h1>Conway's Law &#8211; Applied to AI</h1>
+        <h2>Organisation pr&#228;gt Architektur</h2>
+      </section>
+
+      <section>
+        <h1>Conway's Law</h1>
+        <div class="content">
+          <p>Systeme spiegeln die Kommunikationsstruktur ihrer Organisation.</p>
+          <ul>
+            <li>klare Struktur &#8594; klare Software</li>
+            <li>chaotische Struktur &#8594; chaotischer Code</li>
+          </ul>
+          <div class="r-vstack fragment">
+            <p>&nbsp;</p>
+            <div class="r-hstack">
+              <h1>&#129300;</h1>
+            </div>
+            <div class="r-hstack">
+              <p>Gilt das auch f&#252;r Coding Agents?</p>
+            </div>
+          </div>
+          <div class="r-stretch"></div>
+        </div>
+      </section>
+
+      <section>
+        <h1>AI-Team Organigramm</h1>
+        <div class="content">
+          <img src="images/organigramm.png" alt="AI-Team Organigramm" style="max-height: 640px;">
+          <p>Die Organisation des AI-Teams (Virtuelles Team das an AI-Team arbeitet!)</p>
+        </div>
+      </section>
+
+      <section>
+        <h1>Klare Verantwortung in Organisationen</h1>
+        <div class="content">
+          <ul>
+            <li>Fokus statt &#220;berladung</li>
+            <li>klare Zust&#228;ndigkeiten</li>
+            <li>bessere Kommunikation</li>
+            <li>h&#246;here Qualit&#228;t</li>
+          </ul>
+        </div>
+        <h1 class="fragment" data-fragment-index="1">AI Team erschafft eine geeignete Agent Struktur</h1>
+        <div class="content fragment" data-fragment-index="1">
+          <ul>
+            <li>klare Grenzen im virtuellen Team</li>
+            <li>klare Grenzen im Code</li>
+            <li>jeder Agent kennt seinen Scope</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h1>AI-Team Team</h1>
+        <div class="content">
+          <img src="images/team.png" alt="AI-Team Team" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>AI-Team Chat</h1>
+        <div class="content">
+          <img src="images/chat.png" alt="AI-Team Chat" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>Ver&#228;nderung und Optimierung</h1>
+        <div class="content">
+          <ul>
+            <li>Priorit&#228;ten ver&#228;ndern sich</li>
+            <li>erfolgreiche Teams optimieren ihre Struktur laufend</li>
+          </ul>
+        </div>
+        <h1 class="fragment" data-fragment-index="1">AI-Team optimiert das Agententeam</h1>
+        <div class="content fragment" data-fragment-index="1">
+          <ul>
+            <li>berechnet Verantwortlichkeiten</li>
+            <li>misst Effektivit&#228;t der Agenten</li>
+            <li>schl&#228;gt bessere Strukturen vor</li>
+            <li>erstellt neue Agenten bei Bedarf</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h1>Onboarding &amp; Pair Programming</h1>
+        <div class="content">
+          <ul>
+            <li>Neue Entwickler (menschliche) brauchen Orientierung.</li>
+            <li>Wer kennt sich wo aus?</li>
+            <li>Welche Tools passen zu meiner Aufgabe?</li>
+          </ul>
+        </div>
+        <h1 class="fragment" data-fragment-index="1">AI-Team als Navigator</h1>
+        <div class="content fragment" data-fragment-index="1">
+          <ul>
+            <li>CSS-Spezialist bekommt automatisch Playwright &amp; Storybook</li>
+            <li>Backend-Dev bekommt DB-Tools &amp; Testrunner</li>
+            <li>Passender Pair Programmer wird automatisch zugewiesen</li>
+            <li>Entwickler finden sich sofort zurecht, da sie automatisch mit den Spezialisten verbunden werden.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h1>Setup ist m&#252;hsam</h1>
+        <div class="content">
+          <ul>
+            <li>Prompts</li>
+            <li>Tools</li>
+            <li>Agent.md, Skill.md, instruction.md</li>
+            <li>MCP</li>
+            <li>Modelle</li>
+          </ul>
+        </div>
+        <h1 class="fragment" data-fragment-index="1">AI-Team macht es menschlich</h1>
+        <div class="content fragment" data-fragment-index="1">
+          <ul>
+            <li>&#8222;hire react specialist&#8220;</li>
+            <li>&#8222;hire db expert&#8220;</li>
+            <li>&#8222;hire backend lead&#8220;</li>
+          </ul>
+          <p>Die Komplexit&#228;t bleibt unter der Haube.</p>
+        </div>
+      </section>
+
+      <section>
+        <h1>AI-Team Portfolio</h1>
+        <div class="content">
+          <img src="images/portofolio.png" alt="AI-Team Portfolio" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>AI-Team Settings</h1>
+        <div class="content">
+          <img src="images/settings.png" alt="AI-Team Settings" style="max-height: 640px;">
+        </div>
+      </section>
+
+      <section>
+        <h1>Copilot oder Claude Code sind Datenkraken</h1>
+        <div>
+          <ul>
+            <li>laden Unmengen an Code in die Cloud</li>
+            <li>verlangen viel Geld f&#252;r Token</li>
+            <li>verursachen durch Vertr&#228;ge Vendor-Lockin</li>
+          </ul>
+        </div>
+        <h1 class="fragment" data-fragment-index="1">AI-Team:</h1>
+        <div class="content fragment" data-fragment-index="1">
+          <ul>
+            <li>Open Source</li>
+            <li>Bring Your Own Model</li>
+            <li>Bring Your Own Provider</li>
+            <li>Bestehende Subscriptions nutzbar</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h1>These</h1>
+        <div class="content">
+          <ul>
+            <li>heutige Agents sind m&#228;chtig &#8211; aber schlecht organisiert</li>
+            <li>Context Pollution wird nicht weniger, wenn man dem LLM 100 Agenten und 1000 Skills zur Verfügung stellt
+            </li>
+            <li>Kontext aufräumen ist nur dann nötig, wenn er nicht von Anfang an aufgeräumt ist.</li>
+            <li>Wir müssen Struktur in die Agentenlandschaft bringen</li>
+            <li>Struktur schafft Qualit&#228;t</li>
+            <li>Gut organisierte Agenten bewirken eine gute Softwarearchitektur</li>
+            <li>Conway's Law gilt auch f&#252;r KI</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h1>AI-Team CLI</h1>
+        <div class="content">
+          <img src="images/chat-cli.png" alt="AI-Team Chat CLI" style="max-height: 640px;">
+        </div>
+      </section>
+      <section>
+        <h1>Links</h1>
+        <div class="content">
+          <h2>Code:</h2>
+          <ul>
+            <li>
+              <a href="https://gitlab.ost.ch/clemens.meier/ai-team" target="_blank">AI Gitlab-OST
+                Repository</a>&nbsp;(OST intern)
+              <br />Achtung! Heavy Development and Vibe Coding Chaos ;) Es werden noch keine Pull Requests angenommen.
+              Aber Ideen sind herzlich willkommen!
+            </li>
+          </ul>
+          <h2>Workshops zu Copilot:</h2>
+          <ul>
+            <li>
+              <a href="https://copilot-dev-days.github.io/" target="_blank">Copilot Dev Days Online Workshop</a>
+              <br />Sehr zu empfehlen für diejenigen die tiefer in die Funktionsweise von Copilot eintauchen möchten. Es
+              werden viele praktische Übungen und Beispiele geboten, um die Fähigkeiten von Copilot optimal zu
+              nutzen.<br />
+              Eine GitHub Academic License (gratis für Studenten der OST mit eingescannter Legi) ist erforderlich um
+              alle Übungen zu lösen, aber es lohnt sich auf
+              jeden Fall!
+            </li>
+            <li> <a href="https://alexop.dev/posts/vs-code-copilot-workshop/" target="_blank">Next Level GitHub
+                Copilot</a> (interessante Webseite)
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+
+  <!-- Reveal.js core and plugins from CDN -->
+  <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
+
+  <script src="assets/ost-reveal.js"></script>
+</body>
+
+</html>

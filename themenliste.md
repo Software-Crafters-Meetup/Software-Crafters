@@ -25,13 +25,12 @@ Dies beinhaltet:
 
 Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, das ihr in letzter Zeit aufgefallen ist, und es kurz vorstellt. Das System über GitHub wurde danach erstellt und wird fürs übernächste Treffen verwendet.
 
-| Thema                                                                                                                          | Präsentiert von        | Dauer  | Termin     |
-| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ------ | ---------- |
-| Software Engineering With AI – Without Losing Control                                                                          | Clemens Meier          | t.b.d. | 24.03.2026 |
-| [Type Systems](https://github.com/orgs/Software-Crafters-Meetup/discussions/15)                                                | Lukas (@lbuchli)       | t.b.d. | t.b.d.     |
-| [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14), Session 2            | Lukas (@lukas-messmer) | t.b.d. | t.b.d.     |
-| [Schauen wir uns Jujutsu an](https://github.com/orgs/Software-Crafters-Meetup/discussions/19)                                  | Raphael (@das-g)       | t.b.d. | t.b.d.     |
-| [Functional Programming in Javascript mit Theorie](https://github.com/orgs/Software-Crafters-Meetup/discussions/10), Session 2 | Marco (@marcokuoni)    | t.b.d. | t.b.d.     |
+| Thema                                                                                                                          | Präsentiert von        | Dauer      | Termin     |
+| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------- | ---------- | ---------- |
+| [Schauen wir uns Jujutsu an](https://github.com/orgs/Software-Crafters-Meetup/discussions/19)                                  | Raphael (@das-g)       | 90 Minuten | 28.04.2026 |
+| [Type Systems](https://github.com/orgs/Software-Crafters-Meetup/discussions/15)                                                | Lukas (@lbuchli)       | t.b.d.     | t.b.d.     |
+| [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14), Session 2            | Lukas (@lukas-messmer) | t.b.d.     | t.b.d.     |
+| [Functional Programming in Javascript mit Theorie](https://github.com/orgs/Software-Crafters-Meetup/discussions/10), Session 2 | Marco (@marcokuoni)    | t.b.d.     | t.b.d.     |
 
 ---
 
@@ -45,8 +44,8 @@ Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, da
 | Esperanto-Schnupperkurs¹                                                                                            | Raphael (@das-g)       | 120'  | 15.12.2025 | [Slides](https://ses-ch.github.io/Schnupperkurs/)                                                           |
 | [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14)            | Lukas (@lukas-messmer) | 120'  | 29.01.2026 | [Sides](slides/Praesi_Software_Dokumentation.pdf)                                                           |
 | [Functional Programming in Javascript mit Theorie](https://github.com/orgs/Software-Crafters-Meetup/discussions/10) | Marco (@marcokuoni)    | 120'  | 24.02.2026 | [Slides](https://github.com/marcokuoni/fp_typescript)                                                       |
+| Software Engineering With AI – Without Losing Control (Check out the links at the end of the slides)                | Clemens Meier          | 120'  | 24.03.2026 | [Slides](slides/ai-team-slides/slides/index.html)                                                           |
 
 ---
 
 ¹Spontan abgehalten, da der Vortragende des für dieses Datum geplanten Talks kurzfristig ausfiel.
-

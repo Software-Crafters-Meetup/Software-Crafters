@@ -1,0 +1,1435 @@
+/* OST Reveal.js Theme
+ * Extracts the OST design from uip-lecture into a standalone CSS theme
+ * for use with vanilla Reveal.js (no build tools required)
+ */
+
+/* ============================================
+   Fonts
+   ============================================ */
+@import url('../fonts/source-sans-pro.css');
+
+/* Lato is loaded from Google Fonts in the HTML */
+
+/* ============================================
+   OST Color Palette & Design Tokens
+   ============================================ */
+:root {
+  /* OST Core Colors */
+  --ost-black: rgb(25, 25, 25);
+  --ost-white: rgb(255, 255, 255);
+  --ost-main-color: rgb(140, 25, 95);
+  --ost-secondary-color: rgb(215, 40, 100);
+  --ost-fill-color-transparent: rgba(215, 40, 100, 0.718);
+
+  /* OST Extended Palette */
+  --ost-hellpink: rgb(240, 135, 176);
+  --ost-grau: rgb(135, 135, 135);
+  --ost-hellgrau: rgb(198, 198, 198);
+
+  /* Content slide adjustable properties */
+  --ost-content-line-height: 1.8;
+
+  /* Reveal.js Theme Variables (OST-customized) */
+  --r-background-color: var(--ost-white);
+  --r-main-font: Lato, Helvetica, sans-serif;
+  --r-main-font-size: 42px;
+  --r-main-color: var(--ost-black);
+  --r-block-margin: 20px;
+  --r-heading-margin: 0 0 20px 0;
+  --r-heading-font: Lato, Helvetica, sans-serif;
+  --r-heading-color: var(--ost-black);
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: normal;
+  --r-heading-text-transform: uppercase;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: 600;
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 2.5em;
+  --r-heading2-size: 1.6em;
+  --r-heading3-size: 1.3em;
+  --r-heading4-size: 1em;
+  --r-code-font: monospace;
+  --r-link-color: var(--ost-main-color);
+  --r-link-color-hover: var(--ost-main-color);
+  --r-selection-background-color: var(--ost-hellpink);
+  --r-selection-color: #fff;
+}
+
+/* ============================================
+   Base Reveal.js Overrides for OST
+   ============================================ */
+.reveal-viewport {
+  background: var(--r-background-color);
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  font-weight: normal;
+  color: var(--r-main-color);
+}
+
+.reveal h2 {
+  text-transform: none; /* OST uses sentence case for h2 */
+}
+
+/* ============================================
+   Reveal.js Progress Bar (make it thicker)
+   ============================================ */
+.reveal .progress {
+  height: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+}
+
+.reveal .progress span {
+  background: var(--ost-main-color);
+}
+
+/* Ensure Reveal.js controls sit above the fixed footer */
+.reveal .controls {
+  z-index: 1100;
+  bottom: 60px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.reveal .controls:hover,
+.reveal .controls.visible {
+  opacity: 1;
+}
+
+/* ============================================
+   OST Title Slide Layout
+   ============================================ */
+/* Title slide: Just use <section data-slide-type="title"> with h1, h2, and divs */
+.reveal section[data-slide-type='title'] {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 32% 7% 11% 42%;
+  gap: 0.2em;
+  box-sizing: border-box;
+  background-image: url(../images/slogan.png);
+  background-position: bottom 22px left 15px;
+  background-size: auto 18px;
+  background-repeat: no-repeat;
+}
+
+/* Auto-generate decorative background using ::before */
+.reveal section[data-slide-type='title']::before {
+  content: '';
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+  height: 100%;
+  width: 75%;
+  background-image: url(../brand/ost-area.png);
+  background-position: bottom 0 right 0;
+  background-size: 92%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Auto-generate logo using ::after */
+.reveal section[data-slide-type='title']::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  height: 160px;
+  width: 280px;
+  background-image: url(../brand/ost-logo-german.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: 3;
+}
+
+/* Content wrapper for title slide - ensure proper z-index */
+.reveal section[data-slide-type='title'] > * {
+  position: relative;
+  z-index: 2;
+  width: min(750px, 45vw);
+}
+
+/* Auto-style direct children - h1 is the main title */
+.reveal section[data-slide-type='title'] > h1 {
+  all: initial;
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--ost-main-color);
+  line-height: 1.2;
+  margin-bottom: 0.15em;
+  position: relative;
+  z-index: 2; /* keep text above decorative blob */
+}
+
+/* h2 is the first subtitle - smaller, bold, black */
+.reveal section[data-slide-type='title'] > h2 {
+  all: initial;
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--ost-black);
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+  position: relative;
+  z-index: 2;
+}
+
+/* h2 is the first subtitle - smaller, bold, black */
+.reveal section[data-slide-type='title'] > h3 {
+  all: initial;
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: var(--ost-black);
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+  position: relative;
+  z-index: 2;
+}
+
+/* Divs are stacked metadata */
+.reveal section[data-slide-type='title'] > div {
+  font-family: Lato, sans-serif;
+  font-size: 0.5em;
+  color: var(--ost-black);
+  line-height: 1.8;
+  margin-bottom: 0.1em;
+}
+
+/* First metadata div - add gap after headings */
+.reveal section[data-slide-type='title'] > div:first-of-type {
+  margin-top: 1.8em;
+}
+
+/* Last metadata div (department) - add gap and slightly larger */
+.reveal section[data-slide-type='title'] > div:last-of-type {
+  margin-top: 1.2em;
+  font-size: 0.55em;
+}
+
+/* ============================================
+   OST Chapter Slide Layout
+   ============================================ */
+/* Chapter slide: Just use <section data-slide-type="chapter"> with h1 and h2 */
+.reveal section[data-slide-type='chapter'] {
+  text-align: left;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5% 0 0 0;
+  box-sizing: border-box;
+  height: 100%;
+  background-image: url(../images/slogan.png);
+  background-position: bottom 155px right 20px;
+  background-size: auto 18px;
+  background-repeat: no-repeat;
+}
+
+/* Disable in-slide footer on chapter slides (using fixed footer bar instead) */
+.reveal section[data-slide-type='chapter']::after {
+  display: none;
+}
+
+.reveal section[data-slide-type='chapter']::before {
+  display: none;
+}
+
+/* Chapter title (h1) */
+.reveal section[data-slide-type='chapter'] > h1 {
+  width: fit-content;
+  font-family: Lato, sans-serif;
+  padding: 20px 40px;
+  margin: 0;
+  margin-right: 4em;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--ost-main-color);
+  font-weight: bold;
+  font-size: 2em;
+  text-transform: none;
+  text-shadow: none;
+  letter-spacing: normal;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* Chapter subtitle (h2) */
+.reveal section[data-slide-type='chapter'] > h2 {
+  width: fit-content;
+  max-width: 70%;
+  font-family: Lato, sans-serif;
+  color: white;
+  padding: 15px 40px;
+  margin: 0;
+  margin-right: 1em;
+  background-color: var(--ost-secondary-color);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: none;
+  text-shadow: none;
+  letter-spacing: normal;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* Chapter fixed footer overlay */
+.ost-chapter-footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background-color: white;
+  display: none;
+  font-family: Lato, sans-serif;
+  z-index: 1000;
+}
+
+.ost-chapter-footer-bar.visible {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  padding: 15px 40px;
+  box-sizing: border-box;
+}
+
+.ost-chapter-footer-bar .chapter-footer-org {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 18px;
+  color: var(--ost-black);
+  padding-left: 10px;
+}
+
+.ost-chapter-footer-bar .chapter-footer-extra {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 18px;
+  color: var(--ost-black);
+  padding-left: 10px;
+}
+
+.ost-chapter-footer-bar .chapter-footer-speaker {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 18px;
+  color: var(--ost-black);
+}
+
+.ost-chapter-footer-bar .chapter-footer-date {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 18px;
+  color: var(--ost-black);
+}
+
+.ost-chapter-footer-bar .chapter-footer-logo {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  height: 90px;
+  padding: 0 15px;
+  align-self: center;
+}
+
+/* ============================================
+   OST Full-Screen Image Slide Layout
+   ============================================ */
+/* Image slide: Use <section data-slide-type="image"> with a background image.
+   Content is centered. A white overlay sits only behind the content area.
+   Adjust overlay opacity via --overlay-opacity (default 0.7).
+   No footer, no chapter label — just image + content. */
+.reveal section[data-slide-type='image'] {
+  --overlay-opacity: 0.7;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5%;
+  overflow: visible !important;
+}
+
+/* No full-screen overlay — just the background image */
+.reveal section[data-slide-type='image']::before {
+  display: none;
+}
+
+/* No footer on image slides */
+.reveal section[data-slide-type='image']::after {
+  display: none;
+}
+
+/* Content wrapper with localised white overlay backdrop */
+.reveal section[data-slide-type='image'] > .content {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, var(--overlay-opacity));
+  border-radius: 12px;
+  padding: 1.2em 1.8em;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  line-height: var(--ost-content-line-height);
+  text-align: left;
+  max-width: 85%;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+/* Headings inside image slides keep OST colours */
+.reveal section[data-slide-type='image'] h1 {
+  color: var(--ost-main-color);
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  text-transform: none;
+  margin: 0 0 0.3em 0;
+}
+
+.reveal section[data-slide-type='image'] h2 {
+  color: var(--ost-black);
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  text-transform: none;
+  margin: 0 0 0.2em 0;
+}
+
+.reveal section[data-slide-type='image'] h3 {
+  color: var(--ost-black);
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  text-transform: none;
+  margin: 0 0 0.2em 0;
+}
+
+/* ============================================
+   OST Content Slide Layout
+   ============================================ */
+/* Content slides: Regular <section> without data-slide-type
+   Structure: <section><div>Chapter</div><h1>Title</h1>...content...</section> */
+
+/* All regular slides: no in-slide footer (handled by fixed overlay) */
+.reveal section:not([data-slide-type])::before {
+  display: none;
+}
+
+.reveal section:not([data-slide-type])::after {
+  display: none;
+}
+
+/* Hide Reveal.js built-in slide number */
+.reveal .slide-number {
+  display: none;
+}
+
+/* ============================================
+   Fixed Footer Overlay (always at screen bottom)
+   ============================================ */
+.ost-footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: none; /* shown/hidden via JS */
+  align-items: center;
+  font-family: Lato, sans-serif;
+  background-color: white;
+  z-index: 1000;
+}
+
+.ost-footer-bar.visible {
+  display: flex;
+}
+
+.ost-footer-bar .ost-footer-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--ost-black);
+  padding: 0 15px 0 25px;
+  flex-shrink: 0;
+}
+
+.ost-footer-bar .ost-footer-divider {
+  width: 3px;
+  height: 60%;
+  background-color: var(--ost-main-color);
+  flex-shrink: 0;
+}
+
+.ost-footer-bar .ost-footer-text {
+  font-size: 16px;
+  color: var(--ost-grau);
+  padding: 0 20px;
+  flex: 1;
+}
+
+.ost-footer-bar .ost-footer-date {
+  font-size: 16px;
+  color: var(--ost-grau);
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.ost-footer-bar .ost-footer-logo {
+  height: 50px;
+  padding: 0 15px;
+  flex-shrink: 0;
+}
+
+/* Content slides use flexbox layout */
+.reveal section:not([data-slide-type]) {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 60px;
+  overflow: visible !important;
+}
+
+/* First direct child div is the chapter label */
+.reveal section:not([data-slide-type]) > div:first-child {
+  all: initial;
+  color: var(--ost-black);
+  font-family: Lato, sans-serif;
+  font-size: 0.85em;
+  font-weight: bold;
+  display: block;
+  padding: 10px 0 0 40px;
+}
+
+/* First h1 is the slide title */
+.reveal section:not([data-slide-type]) > h1 {
+  all: initial;
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: Lato, sans-serif;
+  color: var(--ost-main-color);
+  padding: 0 0 15px 40px;
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+
+/* Content wrapper - explicit grouping (recommended) */
+.reveal section:not([data-slide-type]) > .content {
+  font-size: 0.9em;
+  line-height: var(--ost-content-line-height);
+  padding: 1em 1em 1em 40px;
+  box-sizing: border-box;
+  flex: 1;
+  margin-bottom: 5px;
+  overflow: visible;
+  position: relative;
+}
+
+/* Alternative: auto-style direct content elements after h1 */
+.reveal section:not([data-slide-type]) > h1 + p,
+.reveal section:not([data-slide-type]) > h1 + ul,
+.reveal section:not([data-slide-type]) > h1 + ol,
+.reveal section:not([data-slide-type]) > h1 + pre,
+.reveal section:not([data-slide-type]) > h1 + div:not(.content) {
+  font-size: 0.9em;
+  line-height: var(--ost-content-line-height);
+  padding: 1em 1em 1em 40px;
+  box-sizing: border-box;
+  flex: 1;
+  margin-bottom: 5px;
+}
+
+/* ============================================
+   OST Two-Column Layout
+   ============================================ */
+
+/* ============================================
+   Code Block Styling
+   ============================================ */
+.reveal pre {
+  width: 100%;
+  margin: 0.4em 0;
+  box-shadow: none;
+  font-size: 0.55em;
+  position: relative;
+  overflow: visible !important;
+}
+
+.reveal pre code {
+  max-height: none;
+  padding: 1em 1.2em;
+  border-radius: 8px;
+  line-height: 1.5;
+  overflow: auto;
+  position: relative;
+}
+
+/* Code font size utilities */
+.reveal pre.code-sm {
+  font-size: 0.42em;
+}
+.reveal pre.code-md {
+  font-size: 0.55em;
+}
+.reveal pre.code-lg {
+  font-size: 0.7em;
+}
+.reveal pre.code-xl {
+  font-size: 0.85em;
+}
+
+/* Code block toolbar (copy + fullscreen buttons) */
+.ost-code-toolbar {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 100;
+}
+
+.ost-code-toolbar button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: Lato, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s ease;
+}
+
+.ost-code-toolbar button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.ost-code-toolbar button.copied {
+  background: rgba(80, 200, 120, 0.4);
+  color: white;
+}
+
+/* Fullscreen code overlay */
+.ost-code-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.ost-code-fullscreen pre {
+  flex: 1;
+  margin: 0;
+  font-size: 22px !important;
+  overflow: auto;
+}
+
+.ost-code-fullscreen pre code {
+  height: 100%;
+}
+
+.ost-code-fullscreen .ost-fullscreen-close {
+  align-self: flex-end;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-family: Lato, sans-serif;
+}
+
+.ost-code-fullscreen .ost-fullscreen-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   Image Figure with Caption
+   ============================================ */
+.reveal figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5em auto;
+  max-width: 100%;
+}
+
+.reveal figure img {
+  max-width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  cursor: zoom-in;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.reveal figure img:hover {
+  opacity: 0.9;
+}
+
+.reveal figcaption {
+  font-size: 0.45em;
+  color: var(--ost-grau);
+  text-align: center;
+  margin-top: 0.4em;
+  font-style: italic;
+  font-family: Lato, sans-serif;
+}
+
+/* Fullscreen image overlay */
+.ost-image-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.ost-image-fullscreen img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.ost-image-fullscreen figcaption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-style: italic;
+  font-family: Lato, sans-serif;
+}
+
+/* ============================================
+   OST Two-Column Layout (continued)
+   ============================================ */
+.reveal .two-columns-container {
+  display: flex;
+  box-sizing: border-box;
+  height: 85%;
+  gap: 1em;
+}
+
+.reveal .two-column-left,
+.reveal .two-column-right {
+  box-sizing: border-box;
+  padding: 0.5em;
+  width: 50%;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.reveal .slides .scale09 {
+  font-size: 0.9em;
+}
+.reveal .slides .scale08 {
+  font-size: 0.8em;
+}
+.reveal .slides .scale07 {
+  font-size: 0.7em;
+}
+.reveal .slides .scale06 {
+  font-size: 0.6em;
+}
+.reveal .slides .scale05 {
+  font-size: 0.5em;
+}
+.reveal .slides .scale04 {
+  font-size: 0.4em;
+}
+
+/* ============================================
+   Colored Bullet Points
+   ============================================ */
+.reveal section:not([data-slide-type]) ul {
+  list-style: none;
+  padding-left: 1.2em;
+}
+
+.reveal section:not([data-slide-type]) ul > li {
+  position: relative;
+  padding-left: 0.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.reveal section:not([data-slide-type]) ul > li::before {
+  content: '\2022';
+  color: var(--ost-main-color);
+  font-weight: bold;
+  position: absolute;
+  left: -1em;
+}
+
+/* ============================================
+   Arrow Icon Utility
+   ============================================ */
+/* Use class="arrow" on any element (e.g. h3, li, div) to prepend the arrow icon */
+.reveal .arrow::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url(../images/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.4em;
+  vertical-align: middle;
+}
+
+.reveal .arrow {
+  color: var(--ost-black);
+  font-weight: bold;
+  margin-top: 1em;
+  text-transform: none;
+}
+
+/* ============================================
+   Backward Compatibility (old class-based approach)
+   ============================================ */
+/* Keep old classes working for existing slides */
+.reveal .ost-title-slide {
+  height: 100%;
+  width: 100%;
+  text-align: left;
+}
+
+.reveal .ost-title-slide .ost-title-slide-background {
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+  height: 90%;
+  width: 60%;
+  background-image: url(../brand/ost-area.png);
+  background-position: bottom 0 right 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 3000;
+}
+
+.reveal .ost-title-slide .ost-logo {
+  position: absolute;
+  bottom: 55%;
+  right: 4%;
+  height: 15%;
+  z-index: 5000;
+}
+
+.reveal .ost-title-slide .ost-title-slide-info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: left;
+  height: 45%;
+  width: 85%;
+  color: var(--ost-black);
+  z-index: 4000;
+  padding-top: 40px;
+  padding-left: 35%;
+  box-sizing: border-box;
+}
+
+.reveal .ost-title-slide h1.ost-title-slide-title {
+  all: initial;
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--ost-main-color);
+  margin-bottom: 0.2em;
+}
+
+.reveal .ost-title-slide h2.ost-title-slide-sub-title {
+  all: initial;
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--ost-black);
+  margin-bottom: 0.5em;
+}
+
+.reveal .ost-title-slide .ost-title-slide-info-name,
+.reveal .ost-title-slide .ost-title-slide-info-date,
+.reveal .ost-title-slide .ost-title-slide-info-version,
+.reveal .ost-title-slide .ost-title-slide-info-departement {
+  font-family: Lato, sans-serif;
+  font-size: 0.45em;
+  color: var(--ost-black);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.reveal section.ost-logo-top {
+  background-image: url(../brand/ost-logo-german.png);
+  background-repeat: no-repeat;
+  background-position: top 2px right 5px;
+  background-size: 140px;
+}
+
+.reveal .ost-slide-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 18px;
+  color: var(--ost-black);
+}
+
+.reveal .ost-slide {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+}
+
+.reveal .ost-slide .ost-slide-chapter {
+  all: initial;
+  color: var(--ost-black);
+  font-family: Lato, sans-serif;
+  font-size: 0.5em;
+  font-weight: bold;
+  display: block;
+  padding: 5px 0 0 10px;
+}
+
+.reveal .ost-slide h1.ost-slide-title {
+  all: initial;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-family: Lato, sans-serif;
+  color: var(--ost-secondary-color);
+  padding: 5px 0 5px 10px;
+  align-items: center;
+  display: flex;
+}
+
+.reveal .ost-slide .ost-slide-content {
+  background-color: rgba(0, 0, 0, 0.047);
+  font-size: 0.8em;
+  padding: 1em;
+  box-sizing: border-box;
+  flex: 1;
+  margin-bottom: 45px;
+}
+
+/* ============================================
+   In-slide print footers (hidden on screen, shown in print)
+   ============================================ */
+.ost-print-footer {
+  display: none;
+}
+
+/* ============================================
+   Print / PDF Export Styles
+   ============================================ */
+@media print {
+  /* Page setup */
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  /* Each slide as a page */
+  .reveal .slides section {
+    page-break-after: always;
+    page-break-inside: avoid;
+    box-sizing: border-box;
+    width: 100% !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Hide interactive elements */
+  .ost-code-toolbar,
+  .reveal .controls,
+  .reveal .progress,
+  .reveal .slide-number,
+  .reveal .navigate-left,
+  .reveal .navigate-right,
+  .reveal .navigate-up,
+  .reveal .navigate-down {
+    display: none !important;
+  }
+
+  /* Aggressively hide fixed footer overlays */
+  .ost-footer-bar,
+  .ost-footer-bar.visible,
+  .ost-chapter-footer-bar,
+  .ost-chapter-footer-bar.visible {
+    display: none !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    z-index: -9999 !important;
+  }
+
+  /* Title slide */
+  .reveal section[data-slide-type='title'] {
+    padding: 32% 7% 11% 5% !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+    background-image: none !important; /* hide slogan in print - overlaps content */
+  }
+
+  .reveal section[data-slide-type='title']::before {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    right: 0 !important;
+    width: 65% !important;
+    background-size: contain !important;
+    background-position: bottom right !important;
+  }
+
+  .reveal section[data-slide-type='title']::after {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    top: 12% !important;
+    right: 6% !important;
+  }
+
+  .reveal section[data-slide-type='title'] > * {
+    width: auto !important;
+    max-width: 45% !important;
+  }
+
+  /* Chapter slide */
+  .reveal section[data-slide-type='chapter'] {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding: 5% 0 0 0 !important;
+    background-image: none !important; /* hide slogan - clipped in print */
+  }
+
+  .reveal section[data-slide-type='chapter'] > h1 {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin-right: 0 !important;
+  }
+
+  .reveal section[data-slide-type='chapter'] > h2 {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin-right: 0 !important;
+  }
+
+  /* Content slides */
+  .reveal section:not([data-slide-type]) {
+    padding: 30px 40px 80px 40px !important;
+    overflow: hidden !important;
+  }
+
+  .reveal section:not([data-slide-type]) > .content {
+    overflow: hidden !important;
+    flex: 1 !important;
+  }
+
+  /* Code blocks */
+  .reveal pre {
+    overflow: visible !important;
+    page-break-inside: avoid;
+  }
+
+  .reveal pre code {
+    max-height: none !important;
+    overflow: visible !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Images */
+  .reveal figure img {
+    cursor: default !important;
+    max-height: 50vh !important;
+  }
+
+  /* Show all fragments */
+  .reveal .fragment {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  /* Ensure backgrounds print */
+  .reveal .slide-background {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Lists */
+  .reveal section:not([data-slide-type]) ul > li::before {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Slide footer info for print - add at bottom */
+  .reveal section:not([data-slide-type])::after {
+    content: none;
+    display: none !important;
+  }
+
+  /* ---- In-slide print footers ---- */
+  .ost-print-footer {
+    display: flex !important;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 25px;
+    z-index: 100;
+  }
+
+  /* Content slide print footer */
+  .ost-print-footer--content {
+    height: 64px;
+  }
+
+  .ost-print-footer--content .pf-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--ost-black);
+    padding: 0 15px 0 0;
+    flex-shrink: 0;
+  }
+
+  .ost-print-footer--content .pf-divider {
+    width: 3px;
+    height: 60%;
+    background-color: var(--ost-main-color);
+    flex-shrink: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .ost-print-footer--content .pf-text {
+    font-size: 16px;
+    color: var(--ost-grau);
+    padding: 0 20px;
+    flex: 1;
+  }
+
+  .ost-print-footer--content .pf-date {
+    font-size: 16px;
+    color: var(--ost-grau);
+    padding: 0 20px;
+    flex-shrink: 0;
+  }
+
+  .ost-print-footer--content .pf-logo {
+    height: 50px;
+    padding: 0 15px;
+    flex-shrink: 0;
+  }
+
+  /* Chapter slide print footer */
+  .ost-print-footer--chapter {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    height: 140px;
+    padding: 15px 40px;
+  }
+
+  .ost-print-footer--chapter .pf-org {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 18px;
+    color: var(--ost-black);
+    padding-left: 10px;
+  }
+
+  .ost-print-footer--chapter .pf-extra {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 18px;
+    color: var(--ost-black);
+    padding-left: 10px;
+  }
+
+  .ost-print-footer--chapter .pf-speaker {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 18px;
+    color: var(--ost-black);
+  }
+
+  .ost-print-footer--chapter .pf-date {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 18px;
+    color: var(--ost-black);
+  }
+
+  .ost-print-footer--chapter .pf-logo {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    height: 90px;
+    padding: 0 15px;
+    align-self: center;
+  }
+}
+
+/* Reveal.js print-pdf mode (accessed via ?print-pdf) */
+.print-pdf .ost-code-toolbar {
+  display: none !important;
+}
+
+.print-pdf .ost-footer-bar,
+.print-pdf .ost-footer-bar.visible,
+.print-pdf .ost-chapter-footer-bar,
+.print-pdf .ost-chapter-footer-bar.visible {
+  display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
+}
+
+.print-pdf .reveal .fragment {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.print-pdf .reveal pre code {
+  max-height: none !important;
+  overflow: visible !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+}
+
+.print-pdf .reveal section {
+  overflow: hidden !important;
+}
+
+.print-pdf .reveal section:not([data-slide-type]) > .content {
+  overflow: hidden !important;
+}
+
+.print-pdf .reveal section[data-slide-type='title'] {
+  background-image: none !important;
+  padding: 32% 7% 11% 5% !important;
+}
+
+/* Keep the blob and logo properly sized/positioned in print-pdf */
+.print-pdf .reveal section[data-slide-type='title']::before {
+  right: 0 !important;
+  width: 65% !important;
+  height: 100% !important;
+  background-size: contain !important;
+  background-position: bottom right !important;
+}
+
+.print-pdf .reveal section[data-slide-type='title']::after {
+  top: 12% !important;
+  right: 6% !important;
+}
+
+.print-pdf .reveal section[data-slide-type='title'] > * {
+  width: auto !important;
+  max-width: 45% !important;
+}
+
+.print-pdf .reveal section[data-slide-type='chapter'] {
+  background-image: none !important;
+}
+
+/* ---- In-slide print footers for print-pdf mode ---- */
+.print-pdf .ost-print-footer {
+  display: flex !important;
+  align-items: center;
+  font-family: Lato, sans-serif;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 25px;
+  z-index: 100;
+}
+
+.print-pdf .ost-print-footer--content {
+  height: 64px;
+}
+
+.print-pdf .ost-print-footer--content .pf-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--ost-black);
+  padding: 0 15px 0 0;
+  flex-shrink: 0;
+}
+
+.print-pdf .ost-print-footer--content .pf-divider {
+  width: 3px;
+  height: 60%;
+  background-color: var(--ost-main-color);
+  flex-shrink: 0;
+}
+
+.print-pdf .ost-print-footer--content .pf-text {
+  font-size: 16px;
+  color: var(--ost-grau);
+  padding: 0 20px;
+  flex: 1;
+}
+
+.print-pdf .ost-print-footer--content .pf-date {
+  font-size: 16px;
+  color: var(--ost-grau);
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.print-pdf .ost-print-footer--content .pf-logo {
+  height: 50px;
+  padding: 0 15px;
+  flex-shrink: 0;
+}
+
+.print-pdf .ost-print-footer--chapter {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  height: 140px;
+  padding: 15px 40px;
+}
+
+.print-pdf .ost-print-footer--chapter .pf-org {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 18px;
+  color: var(--ost-black);
+  padding-left: 10px;
+}
+
+.print-pdf .ost-print-footer--chapter .pf-extra {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 18px;
+  color: var(--ost-black);
+  padding-left: 10px;
+}
+
+.print-pdf .ost-print-footer--chapter .pf-speaker {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 18px;
+  color: var(--ost-black);
+}
+
+.print-pdf .ost-print-footer--chapter .pf-date {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 18px;
+  color: var(--ost-black);
+}
+
+.print-pdf .ost-print-footer--chapter .pf-logo {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  height: 90px;
+  padding: 0 15px;
+  align-self: center;
+}
+
+/* ============================================
+   Logo Grid
+   ============================================ */
+.logo-grid {
+  display: flex;
+  gap: 2.5em 3em;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+}
+
+.logo-grid .logo-item {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-grid .logo-item img {
+  height: 200px;
+}
+
+.logo-grid .logo-item p {
+  font-size: 0.5em;
+}
