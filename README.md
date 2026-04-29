@@ -16,7 +16,7 @@ Willkommen bei der Community of Practice «Software Crafters». Hier sammeln wir
 
 ## Treffen
 
-- Öffentlich, keine Anmeldung nötig - [Meetup.com](https://www.meetup.com/mitsprache-in-der-digitalen-welt-glarus/events/311189900)
+- Öffentlich, keine Anmeldung nötig - [Meetup.com](https://www.meetup.com/mitsprache-in-der-digitalen-welt-glarus/events/)
 - Ort: Fachhochschule OST in Rapperswil – [Zimmer 1.262](https://geometalab.gitlab.io/campus-maps-with-openstreetmap/ifs-campus-map/?search=way/902580361)
 
 ## Regeln kurz
