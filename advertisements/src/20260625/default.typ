@@ -4,7 +4,7 @@
   #image-layout()
 
   #title-layout-preset(
-    "Collaborative Modelling & Strategic DDD",
+    "",
     [
       Lerne Vorgehensweisen, um Domänenwissen zu sammeln und für die Strukturierung von Software zu verwenden:
       #v(0.5fr)

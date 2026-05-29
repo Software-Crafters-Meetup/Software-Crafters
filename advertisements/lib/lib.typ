@@ -140,7 +140,7 @@
   #v(1fr)
 
   #qrbox(
-    "Weitere Infos zum Meetup und der Themenwahl",
+    "Weitere Infos zum Treffen und der Themenwahl",
     "https://github.com/Software-Crafters-Meetup/Software-Crafters",
     swap: format == "a4",
   )

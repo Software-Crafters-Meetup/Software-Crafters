@@ -4,7 +4,7 @@
   #image-layout()
 
   #title-layout-preset(
-    "Alternativen zu Closed-Source-Software",
+    "",
     [
       Hast du es satt, jeden Monat Geld für ein Stück Software auszugeben,
       welches du nicht einmal besitzt?
