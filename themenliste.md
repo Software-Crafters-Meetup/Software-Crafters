@@ -25,11 +25,11 @@ Dies beinhaltet:
 
 Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, das ihr in letzter Zeit aufgefallen ist, und es kurz vorstellt. Das System über GitHub wurde danach erstellt und wird fürs übernächste Treffen verwendet.
 
-| Thema                                                                                                                          | Präsentiert von              | Dauer      | Termin                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- | ------------------------------------------------------------------------------- |
-| Collaborative Modelling & Strategic Domain-Driven Design                                                                       | Stefan Kapferer (@stefan-ka) | 25.06.2026 | [Beschreibung](https://github.com/orgs/Software-Crafters-Meetup/discussions/28) |
-| [Type Systems](https://github.com/orgs/Software-Crafters-Meetup/discussions/15)                                                | Lukas (@lbuchli)             | t.b.d.     | t.b.d.                                                                          |
-| [Functional Programming in Javascript mit Theorie](https://github.com/orgs/Software-Crafters-Meetup/discussions/10), Session 2 | Marco (@marcokuoni)          | t.b.d.     | t.b.d.                                                                          |
+| Thema                                                                                                                                     | Präsentiert von              | Dauer       | Termin     |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- | ---------- |
+| Collaborative Modelling & Strategic Domain-Driven Design: [Beschreibung](https://github.com/orgs/Software-Crafters-Meetup/discussions/28) | Stefan Kapferer (@stefan-ka) | 120 Minuten | 25.06.2026 |
+| [Type Systems](https://github.com/orgs/Software-Crafters-Meetup/discussions/15)                                                           | Lukas (@lbuchli)             | t.b.d.      | t.b.d.     |
+| [Functional Programming in Javascript mit Theorie](https://github.com/orgs/Software-Crafters-Meetup/discussions/10), Session 2            | Marco (@marcokuoni)          | t.b.d.      | t.b.d.     |
 
 ---
 
