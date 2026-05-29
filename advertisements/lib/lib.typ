@@ -94,20 +94,19 @@
   desc,
   date,
   meetup,
-  day: "Dienstag",
-  time: "18:00 Uhr",
+  day: "Do.",
+  time: "18:00",
   extra: "",
 ) = title-layout[
   #let when = [
     === Wann?
 
-    #day, #date #time
+    #day #date, #time
   ]
   #let where = [
     === Wo?
 
-    OST Campus Rapperswil, Zimmer 1.262 \
-    Oberseestrasse 10, 8640 Rapperswil SG
+    OST RJ, Zimmer 1.262
   ]
 
   = Software Crafters
@@ -124,37 +123,27 @@
     )
   } else {
     when
-    v(1fr)
+    v(0.5fr)
     where
   }
 
-  #v(if format == "a4" { -1em } else { 1fr })
 
   === Was?
 
   #desc
 
+  #v(0.5fr)
   ==== Wir bestellen Pizza ;)
 
   #extra
 
   #v(1fr)
 
-  // #qrbox(
-  //   "Anmeldung auf Meetup",
-  //   "https://www.meetup.com/mitsprache-in-der-digitalen-welt-glarus/events/" + meetup,
-  // )
   #qrbox(
     "Weitere Infos zum Meetup und der Themenwahl",
     "https://github.com/Software-Crafters-Meetup/Software-Crafters",
     swap: format == "a4",
   )
-  #if format == "a4" {
-    qrbox(
-      "Wegbeschreibung zum Zimmer 1.262 im Gebäude 1",
-      "https://geometalab.gitlab.io/campus-maps-with-openstreetmap/ifs-campus-map/?search=way/902580361",
-    )
-  }
 
   #v(1fr)
 
@@ -189,11 +178,8 @@
 #let normal-layout-preset = normal-layout[
   == Software Crafters
   #v(1fr)
-  ==== Worum geht es bei diesem Meetup?
-  Wir treffen uns regelmässig als Community of Practice rund um Software Crafting – sauberes Design, TDD, Pairing, CI/CD, Observability, Security by Design, kontinuierliches Lernen, Erfahrungsaustausch und diverses mehr. Dieses Treffen ist hands-on und praxisnah, ideal für Einsteiger:innen und Profis.
+  Wir treffen uns regelmässig um das *Handwerk der Softwareentwicklung* zu besprechen und zu praktizieren. Diese Treffen sind hands-on und praxisnah, ideal für Einsteiger:innen und Profis.
   #v(1fr)
-  ==== Zielgruppe
-  Alle Interessierten, die sich mit dem Handwerk der Softwareentwicklung auseinandersetzen wollen. \
   *Anfänger willkommen!*
 
   #v(1fr)

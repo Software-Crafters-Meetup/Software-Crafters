@@ -75,33 +75,11 @@
         "type": "github"
       }
     },
-    "pt3d": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1770898718,
-        "narHash": "sha256-EUg516/2T+109mzws3eYzPj6IJwHU1beQwmagYo9yb8=",
-        "owner": "omega-800",
-        "repo": "pt3d",
-        "rev": "05b0c8dd6de7e38457682d9e052ea3395eab2436",
-        "type": "github"
-      },
-      "original": {
-        "owner": "omega-800",
-        "repo": "pt3d",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
         "pre-commit-hooks": "pre-commit-hooks",
-        "pt3d": "pt3d",
-        "treefmt-nix": "treefmt-nix",
-        "typix": "typix"
+        "treefmt-nix": "treefmt-nix"
       }
     },
     "treefmt-nix": {
@@ -121,26 +99,6 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "type": "github"
-      }
-    },
-    "typix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1769071922,
-        "narHash": "sha256-WD8cMrUlqWJWDAD8+B6MUyEuWvi/fgGgv5Wg0xF/Zkc=",
-        "owner": "loqusion",
-        "repo": "typix",
-        "rev": "5d334996b24af342b0992f7f432fcb301ed67314",
-        "type": "github"
-      },
-      "original": {
-        "owner": "loqusion",
-        "repo": "typix",
         "type": "github"
       }
     }
