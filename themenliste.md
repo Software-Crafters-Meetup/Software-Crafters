@@ -45,7 +45,7 @@ Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, da
 | Software Engineering With AI – Without Losing Control (Check out the links at the end of the slides)                                      | Clemens Meier                | 120'        | 24.03.2026 | [Slides](slides/ai-team-slides/slides/index.html)                                                           |
 | [Schauen wir uns Jujutsu an](https://github.com/orgs/Software-Crafters-Meetup/discussions/19)                                             | Raphael (@das-g)             | 90 Minuten  | 28.04.2026 | No Slides                                                                                                   |
 | [Das Warum und Wie von Dokumentationen](https://github.com/orgs/Software-Crafters-Meetup/discussions/14), Session 2                       | Lukas (@lukas-messmer)       | 26.05.2026  | t.b.d.     | No Slides                                                                                                   |
-| Collaborative Modelling & Strategic Domain-Driven Design: [Beschreibung](https://github.com/orgs/Software-Crafters-Meetup/discussions/28) | Stefan Kapferer (@stefan-ka) | 120 Minuten | 25.06.2026 | No Slides                                                                                                   |
+| Collaborative Modelling & Strategic Domain-Driven Design: [Beschreibung](https://github.com/orgs/Software-Crafters-Meetup/discussions/28) | Stefan Kapferer (@stefan-ka) | 120 Minuten | 25.06.2026 | [Slides](slides/CoMo-and-SDDD-Software-Crafters-25.06.2026.pdf)                                             |
 
 ---
 
