@@ -25,10 +25,10 @@ Dies beinhaltet:
 
 Am Kickoff-Meetup haben wir vereinbart, dass jede Person ein Thema mitbringt, das ihr in letzter Zeit aufgefallen ist, und es kurz vorstellt. Das System über GitHub wurde danach erstellt und wird fürs übernächste Treffen verwendet.
 
-| Thema                                                                             | Präsentiert von                                   | Dauer | Termin |
-| --------------------------------------------------------------------------------- | ------------------------------------------------- | ----- | ------ |
-| [GitLab Time-Reporting](https://gitlab.com/gitlab-time-report/gitlab-time-report) | Nina Grässli (@grnin), Jannis Tschan (@TheJanzap) | t.b.d | t.b.d. |
-| DDD Tactical                                                                      | Stefan Kapferer (@stefan-ka)                      | t.b.d | t.b.d. |
+| Thema                                                                             | Präsentiert von                                   | Dauer | Termin     |
+| --------------------------------------------------------------------------------- | ------------------------------------------------- | ----- | ---------- |
+| [GitLab Time-Reporting](https://gitlab.com/gitlab-time-report/gitlab-time-report) | Nina Grässli (@grnin), Jannis Tschan (@TheJanzap) | 120'  | 24.11.2026 |
+| DDD Tactical                                                                      | Stefan Kapferer (@stefan-ka)                      | t.b.d | t.b.d.     |
 
 ---
 
